@@ -1,5 +1,6 @@
 define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
+    $('#todaysmathRow').hide().fadeIn(300);
     $('#todaysmath').hide().fadeIn(300);
     $('#date').hide().fadeIn(300);
     
