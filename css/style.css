@@ -10,7 +10,9 @@ body {
 .centered {
     text-align: center;
 }
-
+#todaysmathRow {
+    display: none;
+}
 #todaysmath {
     margin-top: 50px;
     color: black;
