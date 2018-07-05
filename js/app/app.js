@@ -17,7 +17,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     var mathClock = function () {
 
         $('#date').text(moment().format('M.D.YYYY'));
-        var time = moment($('#time').text(), "H:mm:ss.SSS");
+//        var time = moment($('#time').text(), "H:mm:ss.SSS");
         var unit = 0;
 
         unit = moment().format('D')
