@@ -74,7 +74,7 @@ define([], function() {
             5: 'Power Refinement',
             6: 'Equality',
             7: 'God',
-            8: 'Build Destroy,
+            8: 'Build Destroy',
             9: 'Born',
             0: 'Cipher'
         }
