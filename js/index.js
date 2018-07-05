@@ -1,7 +1,7 @@
 
 require.config({
     paths: {
-        app: 'app/app',
+        app: 'js/app/app',
         noget: 'js/noget',
         supreme: 'js/supreme',
         jquery: 'js/jquery/dist/jquery.min',
