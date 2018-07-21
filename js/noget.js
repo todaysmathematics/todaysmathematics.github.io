@@ -11,7 +11,7 @@ define(['supreme'], function(supreme) {
             var sum = sumArray(numbers);            
             
             if(numbers[0] > numbers[1] && numbers[1] > 0) {
-                translation += 'not being born to ';
+                translation += 'which brings forth '; // 'not being born to ';
             }
             else {
                 translation += 'all being born to ';
