@@ -9,18 +9,19 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     $('#second').hide().fadeIn(3000);
 //    $('#millisecond').hide().fadeIn(1000);
 
-     var timeClock = function () {
+/*     var timeClock = function () {
          $('#time').text(moment().format('H:mm:ss.SSS'));
          var time = moment($('#time').text(), "H:mm:ss.SSS");
         
          var unit = time.format("SSS");
 //         $('#millisecond').html(noget.translate(unit)).attr('title', unit);
      }
-
+*/
     var mathClock = function () {
 
         $('#date').text(moment().format('M.D.YYYY'));
-        var time = moment($('#time').text(), "H:mm:ss.SSS");
+        // var time = moment($('#time').text(), "H:mm:ss.SSS");
+        var time = moment($('#time').text(), "H:mm:ss");
         var unit = 0;
 
         unit = moment().format('D')
@@ -40,7 +41,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     // timeClock();    
     mathClock();    
     // setInterval(timeClock, 100);
-    setInterval(mathClock, 1000);
+    setInterval(mathClock, 5000);
     
 });
 
