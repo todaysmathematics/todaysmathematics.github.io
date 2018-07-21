@@ -1,9 +1,11 @@
-define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
+
+define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
+  
     $('#todaysmathRow').hide().fadeIn(300);
     $('#todaysmath').hide().fadeIn(300);
     $('#date').hide().fadeIn(300);
-    
+
     $('#hour').hide().fadeIn(1000);
     $('#minute').hide().fadeIn(2000);
     $('#second').hide().fadeIn(3000);
@@ -12,7 +14,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 /*     var timeClock = function () {
          $('#time').text(moment().format('H:mm:ss.SSS'));
          var time = moment($('#time').text(), "H:mm:ss.SSS");
-        
+
          var unit = time.format("SSS");
 //         $('#millisecond').html(noget.translate(unit)).attr('title', unit);
      }
@@ -26,7 +28,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
         var unit = 0;
 
         unit = moment().format('D')
-        $('#todaysmath').html(noget.translate(unit)).attr('title', unit);
+        $('#todaysmath').html(noget.translate(unit).toUpperCase()).attr('title', unit);
 
          unit = time.format("H");
          $('#hour').html(noget.translate(unit)).attr('title', unit);
@@ -39,10 +41,9 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
     }
 
-    // timeClock();    
-    mathClock();    
+    // timeClock();
+    mathClock();
     // setInterval(timeClock, 100);
-    setInterval(mathClock, 5000);
-    
-});
+    setInterval(mathClock, 1000);
 
+});
