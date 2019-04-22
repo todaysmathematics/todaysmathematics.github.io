@@ -5,7 +5,8 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     $('#todaysmathRow').hide().fadeIn(300);
     $('#todaysmath').hide().fadeIn(300);
     $('#date').hide().fadeIn(300);
-
+    $('#time').hide();
+  
 //    $('#hour').hide().fadeIn(1000);
 //    $('#minute').hide().fadeIn(2000);
 //    $('#second').hide().fadeIn(3000);
@@ -28,7 +29,8 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
         var unit = 0;
 
         unit = moment().format('D');
-        var todaysMath = noget.translate(unit).toUpperCase().replace(' ALL BEING BORN TO ', '<br>ALL BEING BORN TO<br>');
+        var todaysMath = noget.translate(unit).toUpperCase()
+          .replace(' ALL BEING BORN TO ', '<br><span style="color:gray" class="smaller">ALL BEING BORN TO</span><br>');
         $('#todaysmath').html(todaysMath).attr('title', unit);
 
          unit = time.format("H");
