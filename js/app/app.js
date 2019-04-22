@@ -27,8 +27,9 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
         var time = moment($('#time').text(), "H:mm:ss");
         var unit = 0;
 
-        unit = moment().format('D')
-        $('#todaysmath').html(noget.translate(unit).toUpperCase()).attr('title', unit);
+        unit = moment().format('D');
+        var todaysMath = noget.translate(unit).toUpperCase().replace(' ALL BEING BORN TO ', '<br>ALL BEING BORN TO<br>');
+        $('#todaysmath').html(todaysMath).attr('title', unit);
 
          unit = time.format("H");
          $('#hour').html(noget.translate(unit)).attr('title', unit);
