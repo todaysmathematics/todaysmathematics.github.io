@@ -29,8 +29,11 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
         var unit = 0;
 
         unit = moment().format('D');
+      
         var todaysMath = noget.translate(unit).toUpperCase()
-          .replace('/ ALL BEING BORN TO /g', '<p style="font-size:smallest">all being born to</p>');
+        .split(' ALL BEING BORN TO ')
+        .join('<p style="font-size:small">all being born to</p>');
+      
         $('#todaysmath').html(todaysMath).attr('title', unit);
 
          unit = time.format("H");
