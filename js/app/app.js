@@ -32,7 +32,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
       
         var todaysMath = noget.translate(unit).toUpperCase()
         .split(' ALL BEING BORN TO ')
-        .join('<p style="font-size:small">all being born to</p>');
+        .join('<div style="font-size:25px">all being born to</div>');
       
         $('#todaysmath').html(todaysMath).attr('title', unit);
 
