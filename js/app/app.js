@@ -23,9 +23,9 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     var mathClock = function () {
 
         $('#date').text(moment().format('M.D.YYYY'));
-        $('#time').text(moment().format('H:mm:ss'));
+//        $('#time').text(moment().format('H:mm:ss'));
         // var time = moment($('#time').text(), "H:mm:ss.SSS");
-        var time = moment($('#time').text(), "H:mm:ss");
+//        var time = moment($('#time').text(), "H:mm:ss");
         var unit = 0;
 
         unit = moment().format('D');
@@ -36,14 +36,14 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
       
         $('#todaysmath').html(todaysMath).attr('title', unit);
 
-         unit = time.format("H");
-         $('#hour').html(noget.translate(unit)).attr('title', unit);
+//          unit = time.format("H");
+//          $('#hour').html(noget.translate(unit)).attr('title', unit);
 
-         unit = time.format("m");
-         $('#minute').html(noget.translate(unit)).attr('title', unit);
+//          unit = time.format("m");
+//          $('#minute').html(noget.translate(unit)).attr('title', unit);
 
-         unit = time.format("s");
-         $('#second').html(noget.translate(unit)).attr('title', unit);
+//          unit = time.format("s");
+//          $('#second').html(noget.translate(unit)).attr('title', unit);
 
     }
 
