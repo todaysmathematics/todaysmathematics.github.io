@@ -50,3 +50,9 @@ body {
 #millisecond {
     color:#333333;
 }
+
+@media (max-width: 600px) {
+    #todaysmath {
+        font-size: 40px;
+    }
+}
