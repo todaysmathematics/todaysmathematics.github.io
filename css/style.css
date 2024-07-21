@@ -53,7 +53,7 @@ body {
 
 @media (max-width: 500px) {
     #todaysmath {
-        font-size: 30px;
-        color: brown;
+        font-size: 35px;
+        color: #5C4033;
     }
 }
