@@ -52,8 +52,13 @@ body {
 }
 
 @media (max-width: 500px) {
+
+    #main_container h4 {
+        font-size: 25px;
+        color: #ccc;
+    }
+    
     #todaysmath {
         font-size: 35px;
-        color: #5C4033;
     }
 }
