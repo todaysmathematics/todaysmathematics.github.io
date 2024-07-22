@@ -15,6 +15,11 @@ body {
 #todaysmathRow {
     display: none;
 }
+
+#main_container h4 {
+    color: #aaa;
+}
+
 #todaysmath {
     color: black;
     font-weight: bold;
@@ -55,7 +60,6 @@ body {
 
     #main_container h4 {
         font-size: 25px;
-        color: #ccc;
     }
     
     #todaysmath {
