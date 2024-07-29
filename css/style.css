@@ -3,24 +3,18 @@ body {
     padding-right: 20px;
     padding-left: 20px;
 }
-#main_container {
-        padding-top: 50px;
-}
+
 .navbar {
     background-color: white !important;
 }
+
 .centered {
     text-align: center;
 }
+
 #todaysmathRow {
     display: none;
 }
-
-/* #main_container h4 {
-    color: #000;
-    font-weight: bold;
-    margin-bottom: 50px;
-} */
 
 #todaysmath {
     color: black;
