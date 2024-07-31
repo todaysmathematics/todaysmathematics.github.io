@@ -1,55 +1,48 @@
-
-
 define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
   
-    $('#todaysmathRow').hide().fadeIn(300);
-    $('#todaysmath').hide().fadeIn(300);
-    $('#date').hide().fadeIn(300);
-    $('#time').hide();
-  
-//    $('#hour').hide().fadeIn(1000);
-//    $('#minute').hide().fadeIn(2000);
-//    $('#second').hide().fadeIn(3000);
-//    $('#millisecond').hide().fadeIn(1000);
-
-/*     var timeClock = function () {
-         $('#time').text(moment().format('H:mm:ss.SSS'));
-         var time = moment($('#time').text(), "H:mm:ss.SSS");
-
-         var unit = time.format("SSS");
-//         $('#millisecond').html(noget.translate(unit)).attr('title', unit);
-     }
-*/
     var mathClock = function () {
-
-        $('#date').text(moment().format('M.D.YYYY'));
-//        $('#time').text(moment().format('H:mm:ss'));
-        // var time = moment($('#time').text(), "H:mm:ss.SSS");
-//        var time = moment($('#time').text(), "H:mm:ss");
-        var unit = 0;
-
-        unit = moment().format('D');
-      
-        var todaysMath = noget.translate(unit).toUpperCase()
-        .split(' ALL BEING BORN TO ')
-        .join('<div style="font-size:25px">all being born to</div>');
-      
-        $('#todaysmath').html(todaysMath).attr('title', unit);
-
-//          unit = time.format("H");
-//          $('#hour').html(noget.translate(unit)).attr('title', unit);
-
-//          unit = time.format("m");
-//          $('#minute').html(noget.translate(unit)).attr('title', unit);
-
-//          unit = time.format("s");
-//          $('#second').html(noget.translate(unit)).attr('title', unit);
-
+        var dateUnit = moment().format('D');
+        var math = noget.translate(dateUnit);
+        var todaysMath = math.toUpperCase()
+            .split(' ALL BEING BORN TO ')
+            .join('<div style="font-size:25px">all being born to</div>');        
+        $('#todaysmath').html(todaysMath).attr('title', dateUnit);
     }
 
-    // timeClock();
     mathClock();
-    // setInterval(timeClock, 100);
     setInterval(mathClock, 1000);
+    
+    var todaysDate = moment().format('M.D.YYYY');  
+    $('#date').hide().fadeIn(300).text(todaysDate);
+
+    $('#todaysmathRow').hide().fadeIn(300);
+    $('#todaysmath').hide().fadeIn(300);
 
 });
+
+/*
+
+// upgrade project to typescript and use this:
+
+import $ from 'jquery';
+import moment from 'moment';
+import noget from 'noget';
+
+const mathClock = (): void => {
+    const dateUnit: string = moment().format('D');
+    const math: string = noget.translate(dateUnit);
+    const todaysMath: string = math.toUpperCase()
+        .split(' ALL BEING BORN TO ')
+        .join('<div style="font-size:25px">all being born to</div>');
+    $('#todaysmath').html(todaysMath).attr('title', dateUnit);
+};
+
+mathClock();
+setInterval(mathClock, 1000);
+
+const todaysDate: string = moment().format('M.D.YYYY');
+$('#date').hide().fadeIn(300).text(todaysDate);
+
+$('#todaysmathRow, #todaysmath').hide().fadeIn(300);
+
+*/
