@@ -1,81 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/helpers.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/bootstrap/dist/css/bootstrap.min.css"
-    />
-
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/dist/css/bootstrap.min.css" />
   </head>
 
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-HH5KGVCH75"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HH5KGVCH75"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-
     gtag("config", "G-HH5KGVCH75");
   </script>
+  <!-- Google tag (gtag.js) -->
 
-  <body>
-
-
-    <div id="main_container" class="container-fluid">
+<body>
+    
+    <div id="main_container">
 
         <div style="margin: 35px 0 20px 0; text-align: center;">
             <img style="width: 120px; border-radius: 77px;" src="images/favicon.ico">
         </div>
     
-      <div id="todaysmathRow" class="row">
-        <div class="centered col-md">
-          <!-- <h4>Today's Mathematics</h4> -->
-          <h1 id="todaysmath" class="translation"></h1>
+        <div id="todaysmathRow">
+            <div class="centered">
+                <h1 id="todaysmath" class="translation"></h1>
+            </div>
         </div>
-      </div>
 
-      <div id="dateRow" class="row">
-        <div class="centered col-md">
-          <h5 id="date" class="date">M.D.YYYY</h5>
+        <div id="dateRow">
+            <div class="centered">
+                <h5 id="date" class="date">M.D.YYYY</h5>
+            </div>
         </div>
-      </div>
 
-      <!--        <hr> -->
+        <div>
+            <div class="centered">
+                <h5 id="time" class="time"></h5>
+            </div>
+        </div>
 
-      <div class="row">
-        <div class="centered col-sm">
-          <h5 id="time" class="time">
-            <!--                    H:mm:ss -->
-          </h5>
+        <div id="hourRow" class="row">
+        
+            <div class="centered col-sm">
+                <h4 id="hour" class="translation"></h4>
+            </div>
+        
+            <div class="centered col-sm">
+                <h4 id="minute" class="translation"></h4>
+            </div>
+        
+            <div class="centered col-sm">
+                <h4 id="second" class="translation"></h4>
+            </div>
+        
         </div>
-      </div>
 
-      <div id="hourRow" class="row">
-        <div class="centered col-sm">
-          <h4 id="hour" class="translation"></h4>
-        </div>
-        <div class="centered col-sm">
-          <h4 id="minute" class="translation"></h4>
-        </div>
-        <div class="centered col-sm">
-          <h4 id="second" class="translation"></h4>
-        </div>
-      </div>
-
-      <br />
 
       <!--
         
@@ -91,5 +77,6 @@
     <!-- main_container -->
 
     <script data-main="js/index.js" src="js/requirejs/require.js"></script>
-  </body>
+  
+    </body>
 </html>
