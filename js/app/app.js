@@ -3,9 +3,30 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     var mathClock = function () {
         var dateUnit = moment().format('D');
         var math = noget.translate(dateUnit);
-        var todaysMath = math.toUpperCase()
-            .split(' ALL BEING BORN TO ')
-            .join('<div style="font-size:25px">all being born to</div>');        
+        
+        var mathUpperCase = math.toUpperCase();
+
+        var abbtUpperCase = 'ALL BEING BORN TO';
+        var abbtLowerCase = abbtUpperCase.toLowerCase();
+        
+        var wbfUpperCase = 'WHICH BRINGS FORTH';
+        var wbfLowerCase = wbfUpperCase.toLowerCase();
+        
+        var todaysMath = '';
+        if (mathUpperCase.indexOf(` ${abbtUpperCase} `) !== -1) {
+            todaysMath = mathUpperCase
+            .split(` ${abbtUpperCase} `)
+            .join(`<div style="font-size:25px">${abbtLowerCase}</div>`);
+        }
+        else if (mathUpperCase.indexOf(` ${wbfUpperCase} `) !== -1) {
+            todaysMath = mathUpperCase
+            .split(` ${wbfUpperCase} `)
+            .join(`<div style="font-size:25px">${wbfLowerCase}</div>`);
+        } 
+        else {
+            todaysMath = 'Peace, god.'
+        }
+
         $('#todaysmath').html(todaysMath).attr('title', dateUnit);
     }
 
