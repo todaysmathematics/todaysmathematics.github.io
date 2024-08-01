@@ -11,7 +11,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
         
         var wbfUpperCase = 'WHICH BRINGS FORTH';
         var wbfLowerCase = wbfUpperCase.toLowerCase();
-        
+
         var todaysMath = '';
         if (mathUpperCase.indexOf(` ${abbtUpperCase} `) !== -1) {
             todaysMath = mathUpperCase
@@ -24,7 +24,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
             .join(`<div style="font-size:25px">${wbfLowerCase}</div>`);
         } 
         else {
-            todaysMath = 'Peace, god.'
+            todaysMath = mathUpperCase;
         }
 
         $('#todaysmath').html(todaysMath).attr('title', dateUnit);
