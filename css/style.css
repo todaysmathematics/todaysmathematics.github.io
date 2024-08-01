@@ -48,6 +48,19 @@ body {
     color:#333333;
 }
 
+footer {
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+
 @media (max-width: 500px) {
 
     #main_container h4 {
