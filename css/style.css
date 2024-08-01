@@ -1,7 +1,7 @@
 body {
-    padding-top: 0px;
-    padding-right: 20px;
-    padding-left: 20px;
+    /*padding-top: 0px;*/
+    /*padding-right: 20px;*/
+    /*padding-left: 20px;*/
 }
 
 .centered {
@@ -51,14 +51,13 @@ body {
 footer {
 }
 
-.fixed-bottom {
-    position: fixed;
-    bottom: 0;
-    font-size: 12px;
-    width: 100%;
-    text-align: center;
-    padding: 0 50px 10px 50px;
-}
+/*.fixed-footnote {*/
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*    font-size: 12px;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*}*/
 
 
 @media (max-width: 500px) {
