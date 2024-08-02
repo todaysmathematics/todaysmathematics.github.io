@@ -50,7 +50,33 @@
         </div>
     </footer>
 
-    <script data-main="js/index.js" src="js/requirejs/require.js"></script>
-  
+    <script src="./dist/bundle.js"></script>
+    <script src="js/mathClock.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        function getTodaysDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            return `${month}.${day}.${year}`;
+        }
+
+        const todaysDate = getTodaysDate();
+        $('#date').hide().fadeIn(300).text(todaysDate);
+        $('#todaysmathRow').hide().fadeIn(300);
+        $('#todaysmath').hide().fadeIn(300);
+
+
+        function showMath() {
+            $('#todaysmath').html(mathClock());
+        }
+
+        $('#todaysmath').html(mathClock());
+        setInterval(showMath, 1000);
+
+    </script>
 </body>
 </html>

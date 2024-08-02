@@ -1,1 +1,0 @@
-define([],function(){function e(e,n){return e.nodeName&&e.nodeName.toLowerCase()===n.toLowerCase()}return e});
