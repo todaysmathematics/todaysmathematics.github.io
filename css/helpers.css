@@ -2,3 +2,19 @@
 .border-red {
     border: 5px solid red;
 }
+
+.border-green {
+    border: 5px solid limegreen;
+}
+
+.border-gold {
+    border: 5px solid gold;
+}
+
+.border-black {
+    border: 5px solid black;
+}
+
+.hide {
+    display: none;
+}
