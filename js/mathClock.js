@@ -1,41 +1,51 @@
 
 function mathClock() {
-    const dateUnit = getDayOfMonth();
-    const math = translate(dateUnit);
 
-    var mathUpperCase = math.toUpperCase();
+    function toLowerCaseDiv(text, substring) {
+        function div(text) {
+            return `<div style="font-size:25px">${text}</div>`;
+        }
 
-    var abbtUpperCase = 'ALL BEING BORN TO';
-    var abbtLowerCase = abbtUpperCase.toLowerCase();
+        function space(text) {
+            return ` ${text} `;
+        }
 
-    var wbfUpperCase = 'WHICH BRINGS FORTH';
-    var wbfLowerCase = wbfUpperCase.toLowerCase();
-
-    var todaysMath = '';
-    if (mathUpperCase.indexOf(` ${abbtUpperCase} `) !== -1) {
-        todaysMath = mathUpperCase
-            .split(` ${abbtUpperCase} `)
-            .join(`<div style="font-size:25px">${abbtLowerCase}</div>`);
-    }
-    else if (mathUpperCase.indexOf(` ${wbfUpperCase} `) !== -1) {
-        todaysMath = mathUpperCase
-            .split(` ${wbfUpperCase} `)
-            .join(`<div style="font-size:25px">${wbfLowerCase}</div>`);
-    }
-    else {
-        todaysMath = mathUpperCase;
+        return text.split(space(substring)).join(div(substring.toLowerCase()));
     }
 
-    return todaysMath;
+    function formatTodaysMath(math) {
+        const whichBringsForth = 'WHICH BRINGS FORTH';
+        const allBeingBornTo = 'ALL BEING BORN TO';
+
+        if (includes(math, ` ${allBeingBornTo} `)) {
+            return toLowerCaseDiv(math, allBeingBornTo);
+        }
+        else if (includes(math, ` ${(whichBringsForth)} `)) {
+            return toLowerCaseDiv(math, whichBringsForth);
+        }
+        else {
+            return math;
+        }
+    }
+
+    const upperCaseMath = noget_translate(dayOfMonth()).toUpperCase();
+    return formatTodaysMath(upperCaseMath);
 }
 
-function getDayOfMonth() {
+
+function includes(text, subString) {
+    return text.indexOf(subString) !== -1;
+}
+
+function dayOfMonth() {
     const today = new Date();
     const day = today.getDate();
     return String(day);
 }
 
-function translate(sourceText) {
+/////////////
+
+function noget_translate(sourceText) {
     sourceText = sourceText.replace(/\W/g, '');
 
     var translation = '';
@@ -60,7 +70,7 @@ function translate(sourceText) {
 }
 
 function recurse(sourceText) {
-    if(sourceText.length == 0) {
+    if(sourceText.length === 0) {
         return '';
     }
     else {
