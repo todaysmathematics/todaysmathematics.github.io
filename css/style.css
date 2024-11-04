@@ -19,10 +19,13 @@
 
 .doTheKnowledge {
     margin-top: 99px;
+    margin-bottom: 33px;
 }
 
 .doTheKnowledge a {
     display: block;
+    padding: 0 21px 0 21px;
+    margin-bottom: 10px;
 }
 
 #date {
