@@ -49,29 +49,6 @@
         </div>
     </footer>
 
-    <script src="js/mathClock.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-
-        function getTodaysDate() {
-            const today = new Date();
-            const day = today.getDate().toString();
-            const month = (today.getMonth() + 1).toString();
-            const year = today.getFullYear().toString();
-            return `${month}.${day}.${year}`;
-        }
-
-        const todaysDate = getTodaysDate();
-        $('#date').hide().fadeIn(300).text(todaysDate);
-        $('#todaysmathRow').hide().fadeIn(300);
-
-        function showMath() {
-            $('#todaysmath').html(mathClock());
-        }
-
-        $('#todaysmath').html(mathClock());
-        setInterval(showMath, 1000);
-
-    </script>
+    <script src="js/bundle.js"></script>
 </body>
 </html>
