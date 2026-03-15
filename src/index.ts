@@ -1,4 +1,7 @@
 import { mathClock, dayOfMonth } from './mathClock';
+import '../css/bootstrap/dist/css/bootstrap.min.css';
+import '../css/style.css';
+import '../css/helpers.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     function getTodaysDate(): string {
