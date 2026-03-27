@@ -3,7 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.ts',
+    devServer: {
+        static: './dist',
+        port: 3000,
+        open: true,
+    },
     module: {
         rules: [
             {
@@ -31,7 +37,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'images', to: 'images' }
+                { from: 'images', to: 'images' },
+                { from: 'CNAME' }
             ]
         })
     ]

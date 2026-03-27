@@ -1,39 +1,28 @@
-import { mathClock, dayOfMonth } from './mathClock';
-import '../css/bootstrap/dist/css/bootstrap.min.css';
-import '../css/style.css';
-import '../css/helpers.css';
+import { mathClock } from './mathClock';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
+import './css/helpers.css';
 
-document.addEventListener('DOMContentLoaded', () => {
-    function getTodaysDate(): string {
-        const today = new Date();
-        const day = today.getDate().toString();
-        const month = (today.getMonth() + 1).toString();
-        const year = today.getFullYear().toString();
-        return `${month}.${day}.${year}`;
-    }
+function getTodaysDate(): string {
+    const today = new Date();
+    const day = today.getDate().toString();
+    const month = (today.getMonth() + 1).toString();
+    const year = today.getFullYear().toString();
+    return `${month}.${day}.${year}`;
+}
 
-    const todaysDate = getTodaysDate();
-    const dateElement = document.getElementById('date');
-    if (dateElement) {
-        dateElement.textContent = todaysDate;
-        dateElement.style.display = 'block';
-        dateElement.style.opacity = '1';
-    }
+const dateElement = document.getElementById('date');
+if (dateElement) {
+    dateElement.textContent = getTodaysDate();
+    dateElement.classList.add('visible');
+}
 
-    const todaysmathRowElement = document.getElementById('todaysmathRow');
-    if (todaysmathRowElement) {
-        todaysmathRowElement.style.display = 'block';
-        todaysmathRowElement.style.opacity = '1';
-    }
+const todaysmathRowElement = document.getElementById('todaysmathRow');
+if (todaysmathRowElement) {
+    todaysmathRowElement.classList.add('visible');
+}
 
-    const todaysmathElement = document.getElementById('todaysmath');
-
-    function showMath() {
-        if (todaysmathElement) {
-            todaysmathElement.innerHTML = mathClock();
-        }
-    }
-
-    showMath();
-    setInterval(showMath, 1000);
-});
+const todaysmathElement = document.getElementById('todaysmath');
+if (todaysmathElement) {
+    todaysmathElement.innerHTML = mathClock();
+}
