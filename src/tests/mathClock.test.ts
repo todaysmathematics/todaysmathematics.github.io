@@ -1,4 +1,4 @@
-import { mathClock, dayOfMonth, sumArray, recurse, translate } from './mathClock';
+import { mathClock, dayOfMonth, sumArray, recurse, translate } from '../mathClock';
 
 const mockDay = (day: number) => {
     jest.spyOn(global, 'Date').mockImplementation(() => ({
